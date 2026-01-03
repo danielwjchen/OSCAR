@@ -1,5 +1,10 @@
 from django.db import models
 
+from rest_server.aggregator.choices import (
+    IP_ADDRESS_TYPE_CHOICES,
+    UTILIZATION_TYPE_CHOICES,
+)
+
 
 class Host(models.Model):
     name = models.CharField(max_length=255)
@@ -8,12 +13,6 @@ class Host(models.Model):
 
     def __str__(self):
         return self.name
-
-
-IP_ADDRESS_TYPE_CHOICES = [
-    ("public", "Public"),
-    ("private", "Private"),
-]
 
 
 class IPAddress(models.Model):
@@ -54,13 +53,6 @@ class Temperatue(models.Model):
 
     def __str__(self):
         return f"{self.host.name} - {self.sensor_name}: {self.value}°C"
-
-
-UTILIZATION_TYPE_CHOICES = [
-    ("cpu", "CPU"),
-    ("memory", "Memory"),
-    ("disk", "Disk"),
-]
 
 
 class Utilization(models.Model):
