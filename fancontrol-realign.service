@@ -1,0 +1,26 @@
+# /etc/systemd/system/fancontrol-realign.service
+#
+# Re-aligns /etc/fancontrol with the current /sys/class/hwmon devices and
+# starts (or restarts) fancontrol at boot.
+#
+# Install:
+#   install -m 0755 fancontrol-realign.sh /usr/local/sbin/fancontrol-realign.sh
+#   install -m 0644 fancontrol-realign.service /etc/systemd/system/
+#   systemctl daemon-reload
+#   systemctl enable fancontrol-realign
+#
+# Alternative: instead of this unit, add to the existing fancontrol.service:
+#   [Service]
+#   ExecStartPre=/usr/local/sbin/fancontrol-realign.sh --no-start
+[Unit]
+Description=Re-align /etc/fancontrol with current hwmon devices
+After=local-fs.target
+Before=fancontrol.service
+ConditionPathExists=/etc/fancontrol
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/fancontrol-realign.sh
+
+[Install]
+WantedBy=multi-user.target

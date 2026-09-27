@@ -1,0 +1,20 @@
+# Configuration file manually corrected to fix path errors
+INTERVAL=10
+DEVPATH=hwmon3=devices/pci0000:00/0000:00:03.1/0000:07:00.0/0000:08:00.0/0000:09:00.0 hwmon4=devices/platform/it87.2624
+DEVNAME=hwmon3=amdgpu hwmon4=it8622
+
+# Target IT87 PWMs to read AMDGPU temperatures
+FCTEMPS=hwmon4/pwm3=hwmon3/temp1_input hwmon4/pwm2=hwmon3/temp1_input
+
+# Match IT87 PWMs to IT87 fan inputs (Changed hwmon3 to hwmon4 on the right side)
+FCFANS=hwmon4/pwm3=hwmon4/fan3_input hwmon4/pwm2=hwmon4/fan2_input
+
+MINTEMP=hwmon4/pwm3=20 hwmon4/pwm2=20
+MAXTEMP=hwmon4/pwm3=60 hwmon4/pwm2=60
+
+MINSTART=hwmon4/pwm3=150 hwmon4/pwm2=150
+MINSTOP=hwmon4/pwm3=0 hwmon4/pwm2=0
+
+MINPWM=hwmon4/pwm3=0 hwmon4/pwm2=0
+MAXPWM=hwmon4/pwm3=255 hwmon4/pwm2=255
+

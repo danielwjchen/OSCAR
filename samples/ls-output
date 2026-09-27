@@ -1,0 +1,10 @@
+total 0
+lrwxrwxrwx 1 root root 0 Sep 27 10:29 hwmon0 -> ../../devices/virtual/thermal/thermal_zone0/hwmon0
+lrwxrwxrwx 1 root root 0 Sep 27 10:29 hwmon1 -> ../../devices/pci0000:00/0000:00:01.1/0000:01:00.0/nvme/nvme0/hwmon1
+lrwxrwxrwx 1 root root 0 Sep 27 10:29 hwmon2 -> ../../devices/pci0000:00/0000:00:01.2/0000:02:00.2/0000:03:00.0/0000:04:00.0/hwmon/hwmon2
+lrwxrwxrwx 1 root root 0 Sep 27 10:29 hwmon3 -> ../../devices/pci0000:00/0000:00:03.1/0000:07:00.0/0000:08:00.0/0000:09:00.0/hwmon/hwmon3
+lrwxrwxrwx 1 root root 0 Sep 27 10:37 hwmon4 -> ../../devices/platform/it87.2624/hwmon/hwmon4
+lrwxrwxrwx 1 root root 0 Sep 27 10:29 hwmon5 -> ../../devices/pci0000:00/0000:00:18.3/hwmon/hwmon5
+lrwxrwxrwx 1 root root 0 Sep 27 10:37 hwmon6 -> ../../devices/platform/PNP0C14:00/wmi_bus/wmi_bus-PNP0C14:00/DEADBEEF-2001-0000-00A0-C90629100000/hwmon/hwmon6
+lrwxrwxrwx 1 root root 0 Sep 27 10:29 hwmon7 -> ../../devices/pci0000:00/0000:00:01.2/0000:02:00.0/usb1/1-5/1-5.1/1-5.1:1.2/0003:046D:C52B.0004/0003:046D:4004.0008/power_supply/hidpp_battery_0/hwmon7
+lrwxrwxrwx 1 root root 0 Sep 27 10:37 hwmon8 -> ../../devices/pci0000:00/0000:00:01.2/0000:02:00.0/usb1/1-5/1-5.2/1-5.2:1.2/0003:046D:C52B.0007/0003:046D:4096.0009/power_supply/hidpp_battery_1/hwmon8
