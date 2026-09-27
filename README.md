@@ -30,9 +30,9 @@ boot and rewrites `/etc/fancontrol` to match, then (re)starts fancontrol.
 - **Fan controller:** IT87 (IT8622) —
   `devices/platform/it87.2624` (hwmon name `it8622`), controlling `pwm2`/`pwm3`
 
-See [`fancontrol`](fancontrol) for a sample `/etc/fancontrol` and
-[`ls-output`](ls-output) for a sample `ls -l /sys/class/hwmon/` from the target
-system.
+See [`samples/fancontrol`](samples/fancontrol) for a sample `/etc/fancontrol`
+and [`samples/ls-output`](samples/ls-output) for a sample
+`ls -l /sys/class/hwmon/` from the target system.
 
 ## Files
 
@@ -41,8 +41,8 @@ system.
 | `fancontrol-realign.sh` | The re-alignment script (runs as root at boot) |
 | `fancontrol-realign.service` | Example systemd oneshot unit for boot |
 | `test-fancontrol-realign.sh` | Self-test: builds a fake hwmon tree and checks the rewritten config |
-| `fancontrol` | Sample `/etc/fancontrol` (the config the script rewrites) |
-| `ls-output` | Sample `ls -l /sys/class/hwmon/` output from the target system |
+| `samples/fancontrol` | Sample `/etc/fancontrol` (the config the script rewrites) |
+| `samples/ls-output` | Sample `ls -l /sys/class/hwmon/` output from the target system |
 
 ## How it works
 

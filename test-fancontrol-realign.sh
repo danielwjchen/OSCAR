@@ -9,7 +9,7 @@
 set -euo pipefail
 
 SCRIPT_DIR=$(cd -- "$(dirname -- "$0")" && pwd)
-SAMPLE="${1:-$SCRIPT_DIR/fancontrol}"
+SAMPLE="${1:-$SCRIPT_DIR/samples/fancontrol}"
 SCRIPT="$SCRIPT_DIR/fancontrol-realign.sh"
 
 WORK=$(mktemp -d)
